@@ -184,3 +184,5 @@ cd frontend && npm test
 - Replace seeded nutrition values with lab-tested figures, and keep product claims factual.
 - Confirm GST treatment for your products and adjust `TAX_RATE` if needed.
 - Enable HTTPS-only and set a strong `JWT_SECRET`.
+#   N a t u r a l N a r v e s t  
+ 
