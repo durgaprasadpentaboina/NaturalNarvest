@@ -1,9 +1,15 @@
+
 import { Link } from 'react-router-dom';
 import useAsync from '../hooks/useAsync';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import { categoryService } from '../services';
 import { ErrorState } from '../components/EmptyState';
 import { withFallback } from '../utils/images';
+
+const categoryImages = {
+  Pulses: '/categories/Pulses.jpg',
+  Rice: '/categories/Rice.jpg',
+};
 
 export default function Categories() {
   useDocumentTitle('Categories');
@@ -64,7 +70,7 @@ export default function Categories() {
                 className="relative block overflow-hidden"
               >
                 <img
-                  src={c.image}
+                  src={categoryImages[c.name] || c.image}
                   onError={withFallback}
                   alt={c.name}
                   loading="lazy"
